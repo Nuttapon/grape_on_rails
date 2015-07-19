@@ -6,8 +6,8 @@ module API
       resource :blogs do
         desc "Return a list of blogs"
 
-        get '/' do
-          blogs = Blog.order('id desc')
+        get '/', jbuilder: 'v2/blogs/all' do
+          @blogs = Blog.order('id desc')
         end
 
         get :first do
