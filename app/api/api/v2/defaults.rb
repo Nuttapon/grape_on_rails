@@ -1,10 +1,10 @@
 module API
-  module V1
+  module V2
     module Defaults
       extend ActiveSupport::Concern
 
       included do
-        version 'v1'
+        version 'v2'
         format :json
 
         rescue_from ActiveRecord::RecordNotFound do |e|
